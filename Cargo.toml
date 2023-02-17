@@ -9,4 +9,3 @@ description = "A Rust implementation of the CGL hash function using the supersin
 
 [dependencies]
 ark-ff = "0.4.0"
-ark-test-curves = "0.4.0"
