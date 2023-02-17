@@ -9,3 +9,5 @@ See a pseudo code snippet below for the general idea of the algorithm.
 
 
 Note that the sage version does not implement the same square root algorithm and so they output different results, this will be fixed in future version.
+
+Requires sagemath and rust, simply run ./benchmark.sh to test for 256 bit input.
