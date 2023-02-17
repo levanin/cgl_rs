@@ -1,0 +1,12 @@
+[package]
+name = "cgl_rs"
+version = "0.1.0"
+edition = "2021"
+authors = ["Shai Levin <shai@science.capetown"]
+description = "A Rust implementation of the CGL hash function using the supersingular isogeny graph."
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+ark-ff = "0.4.0"
+ark-test-curves = "0.4.0"
