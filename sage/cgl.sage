@@ -43,10 +43,7 @@ def det_sqrt(x):
 		else:
 			x1 = tonelli_shanks(x0*INV_NON_RES)
 			return F(0 + x1 * i)
-	alpha = x.norm()
-	if not(alpha.is_square()):
-		return False
-	
+	alpha = x.norm()	
 	alpha = tonelli_shanks(alpha)
 	delta = INV_2* (x0 + alpha)
 	if not(delta.is_square()):
