@@ -1,6 +1,7 @@
 use std::env;
 use ark_ff::{Field};
 use ark_ff::fields::{Fp320, MontBackend, Fp2Config, Fp2, MontFp};
+use std::time::Instant;
 // prime chosen is 2^256 * 45 - 1
 // init base field
 #[derive(ark_ff::MontConfig)]
@@ -92,6 +93,10 @@ fn walk_step(j_i: &Fq2, j_i_minus_one: &Fq2, sign: Fq2) -> (Fq2, Fq2) {
 fn main() {
     let args: Vec<String> = env::args().collect();
     let input: &str = &args[1];
+
+    //initialize time count
+    let before= Instant::now();
+
     let mut j_i: Fq2 = Fq2::new(MontFp!("1728"), MontFp!("0"));
     let mut j_i_minus_one: Fq2 = Fq2::new(MontFp!("1728"), MontFp!("0"));
     let mut sign: Fq2;
@@ -105,5 +110,9 @@ fn main() {
         println!("{}", &j_i.c0.to_string());
     } else {
         println!("{} + {}*i", &j_i.c0.to_string(), &j_i.c1.to_string());
+    }
+    if args.len() > 2
+    {
+        println!("Elapsed time: {:.2?}", before.elapsed());
     }
 }

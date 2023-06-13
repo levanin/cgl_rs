@@ -1,7 +1,6 @@
 #CGL HASH for primes p = 3 mod 4
 
 import sys
-
 p = 2^256 * 45 - 1
 
 
@@ -78,3 +77,4 @@ def CGL(walk_string, start, previous):
 
 inp = sys.argv[1]
 CGL(inp, F(1728), F(1728))
+print("Elapsed time: {:.2f}ms".format(timeit("CGL(inp, F(1728), F(1728))", seconds=True)*1000))
