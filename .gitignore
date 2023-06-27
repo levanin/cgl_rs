@@ -1,3 +1,4 @@
 /target/
 *.lock
 *.sage.py
+/.idea
